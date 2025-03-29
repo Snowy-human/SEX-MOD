@@ -1,0 +1,76 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_strip",
+          "text": "Strip",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Strip"
+          },
+          "displayCondition": {
+            "name": "ShowNude"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 366,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_expansion",
+          "text": "Expansion",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ExpansionRia"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 348,
+          "y": 116,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_dress",
+          "text": "Dress",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "RiaDress"
+          },
+          "displayCondition": {
+            "name": "ShowDress"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 366,
+          "y": 80,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "sex:riahouse",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 25,
+    "separation": 5,
+    "salt": 229801045
+  }
+}

@@ -1,0 +1,109 @@
+package net.mcreator.sex.client.gui;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
+
+import net.mcreator.sex.world.inventory.RiaExpInventoryMenu;
+import net.mcreator.sex.procedures.ShowNudeProcedure;
+import net.mcreator.sex.procedures.ShowDressProcedure;
+import net.mcreator.sex.network.RiaExpInventoryButtonMessage;
+import net.mcreator.sex.SexMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
+public class RiaExpInventoryScreen extends AbstractContainerScreen<RiaExpInventoryMenu> {
+	private final static HashMap<String, Object> guistate = RiaExpInventoryMenu.guistate;
+	private final Level world;
+	private final int x, y, z;
+	private final Player entity;
+	Button button_strip;
+	Button button_expansion;
+	Button button_dress;
+
+	public RiaExpInventoryScreen(RiaExpInventoryMenu container, Inventory inventory, Component text) {
+		super(container, inventory, text);
+		this.world = container.world;
+		this.x = container.x;
+		this.y = container.y;
+		this.z = container.z;
+		this.entity = container.entity;
+		this.imageWidth = 176;
+		this.imageHeight = 166;
+	}
+
+	@Override
+	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+		this.renderBackground(guiGraphics);
+		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+		this.renderTooltip(guiGraphics, mouseX, mouseY);
+	}
+
+	@Override
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+		RenderSystem.setShaderColor(1, 1, 1, 1);
+		RenderSystem.enableBlend();
+		RenderSystem.defaultBlendFunc();
+		RenderSystem.disableBlend();
+	}
+
+	@Override
+	public boolean keyPressed(int key, int b, int c) {
+		if (key == 256) {
+			this.minecraft.player.closeContainer();
+			return true;
+		}
+		return super.keyPressed(key, b, c);
+	}
+
+	@Override
+	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+	}
+
+	@Override
+	public void init() {
+		super.init();
+		button_strip = Button.builder(Component.translatable("gui.sex.ria_exp_inventory.button_strip"), e -> {
+			if (ShowNudeProcedure.execute(entity)) {
+				SexMod.PACKET_HANDLER.sendToServer(new RiaExpInventoryButtonMessage(0, x, y, z));
+				RiaExpInventoryButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + 240, this.topPos + 43, 51, 20).build(builder -> new Button(builder) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ShowNudeProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		});
+		guistate.put("button:button_strip", button_strip);
+		this.addRenderableWidget(button_strip);
+		button_expansion = Button.builder(Component.translatable("gui.sex.ria_exp_inventory.button_expansion"), e -> {
+			if (true) {
+				SexMod.PACKET_HANDLER.sendToServer(new RiaExpInventoryButtonMessage(1, x, y, z));
+				RiaExpInventoryButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 222, this.topPos + 79, 72, 20).build();
+		guistate.put("button:button_expansion", button_expansion);
+		this.addRenderableWidget(button_expansion);
+		button_dress = Button.builder(Component.translatable("gui.sex.ria_exp_inventory.button_dress"), e -> {
+			if (ShowDressProcedure.execute(entity)) {
+				SexMod.PACKET_HANDLER.sendToServer(new RiaExpInventoryButtonMessage(2, x, y, z));
+				RiaExpInventoryButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}).bounds(this.leftPos + 240, this.topPos + 43, 51, 20).build(builder -> new Button(builder) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ShowDressProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		});
+		guistate.put("button:button_dress", button_dress);
+		this.addRenderableWidget(button_dress);
+	}
+}

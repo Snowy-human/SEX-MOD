@@ -1,0 +1,13 @@
+{
+  "workspacePanelIconSize": "TILES",
+  "workspacePanelSortType": "CREATED",
+  "workspacePanelSortAscending": true,
+  "projectBrowserSplitPos": 0,
+  "projectBrowserState": {
+    "expandedPaths": [
+      "[, SEX 2]",
+      "[, SEX 2, Source (Gradle)]",
+      "[, SEX 2, Resources (Gradle)]"
+    ]
+  }
+}

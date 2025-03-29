@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "PERIOD",
+    "keyBindingName": "Debug_Key_Test",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "DebugKeyTestOnKeyPressed"
+    }
+  }
+}

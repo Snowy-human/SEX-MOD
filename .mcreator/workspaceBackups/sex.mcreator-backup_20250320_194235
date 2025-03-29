@@ -1,0 +1,718 @@
+{
+  "mod_elements": [
+    {
+      "name": "Ria",
+      "type": "animatedentity",
+      "compiles": false,
+      "locked_code": true,
+      "registry_name": "ria",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/client/renderer/RiaRenderer.java",
+          "src/main/java/net/mcreator/sex/entity/model/RiaModel.java",
+          "src/main/resources/assets/sex/models/item/ria_spawn_egg.json",
+          "src/main/java/net/mcreator/sex/entity/RiaEntity.java"
+        ]
+      },
+      "path": "~/Ria"
+    },
+    {
+      "name": "ExpansionRia",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "expansion_ria",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/ExpansionRiaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ria/Code"
+    },
+    {
+      "name": "Riainventory",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riainventory",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/world/inventory/RiainventoryMenu.java",
+          "src/main/java/net/mcreator/sex/network/RiainventoryButtonMessage.java",
+          "src/main/java/net/mcreator/sex/client/gui/RiainventoryScreen.java"
+        ]
+      },
+      "path": "~/Ria"
+    },
+    {
+      "name": "Riahouse",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riahouse",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sex/worldgen/structure/riahouse.json",
+          "src/main/resources/data/sex/worldgen/template_pool/riahouse.json",
+          "src/main/resources/data/sex/worldgen/structure_set/riahouse.json"
+        ]
+      },
+      "path": "~/Ria"
+    },
+    {
+      "name": "Riaexpan",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riaexpan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/client/renderer/RiaexpanRenderer.java",
+          "src/main/java/net/mcreator/sex/entity/model/RiaexpanModel.java",
+          "src/main/java/net/mcreator/sex/entity/RiaexpanEntity.java"
+        ]
+      },
+      "path": "~/Ria"
+    },
+    {
+      "name": "RiaExpInventory",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ria_exp_inventory",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/network/RiaExpInventoryButtonMessage.java",
+          "src/main/java/net/mcreator/sex/world/inventory/RiaExpInventoryMenu.java",
+          "src/main/java/net/mcreator/sex/client/gui/RiaExpInventoryScreen.java"
+        ]
+      },
+      "path": "~/Ria"
+    },
+    {
+      "name": "MilkRia",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "milk_ria",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/MilkRiaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ria/Code"
+    },
+    {
+      "name": "Strip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riastrip",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/StripProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ria/Code"
+    },
+    {
+      "name": "RiaExpStrip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ria_exp_strip",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/RiaExpStripProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ria/Code"
+    },
+    {
+      "name": "RiaDress",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ria_dress",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/RiaDressProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ria/Code"
+    },
+    {
+      "name": "RiaExpDress",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ria_exp_dress",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/RiaExpDressProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ria/Code"
+    },
+    {
+      "name": "ShowDress",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_dress",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/ShowDressProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ria/Code"
+    },
+    {
+      "name": "ShowNude",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_nude",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/ShowNudeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ria/Code"
+    },
+    {
+      "name": "SEX2",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sex_2",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Cum",
+      "type": "fluid",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cum",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/fluid/types/CumFluidType.java",
+          "src/main/java/net/mcreator/sex/fluid/CumFluid.java",
+          "src/main/java/net/mcreator/sex/block/CumBlock.java",
+          "src/main/resources/assets/sex/blockstates/cum.json",
+          "src/main/resources/assets/sex/models/block/cum.json",
+          "src/main/resources/assets/sex/models/item/cum_bucket.json",
+          "src/main/java/net/mcreator/sex/item/CumItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Fuckitbucket",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuckitbucket",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/FuckitbucketProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fuckit",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuckit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/network/FuckitMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "Jenny",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jenny",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/entity/model/JennyModel.java",
+          "src/main/java/net/mcreator/sex/entity/JennyEntity.java",
+          "src/main/resources/assets/sex/models/item/jenny_spawn_egg.json",
+          "src/main/java/net/mcreator/sex/client/renderer/JennyRenderer.java"
+        ]
+      },
+      "path": "~/Jenny"
+    },
+    {
+      "name": "Riastripped",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riastripped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/entity/RiastrippedEntity.java",
+          "src/main/java/net/mcreator/sex/client/renderer/RiastrippedRenderer.java",
+          "src/main/java/net/mcreator/sex/entity/model/RiastrippedModel.java"
+        ]
+      },
+      "path": "~/Ria"
+    },
+    {
+      "name": "Riastrippedexpan",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riastrippedexpan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/entity/RiastrippedexpanEntity.java",
+          "src/main/java/net/mcreator/sex/client/renderer/RiastrippedexpanRenderer.java",
+          "src/main/java/net/mcreator/sex/entity/model/RiastrippedexpanModel.java"
+        ]
+      },
+      "path": "~/Ria"
+    },
+    {
+      "name": "PLayre",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_ria",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/entity/model/PLayreModel.java",
+          "src/main/java/net/mcreator/sex/entity/PLayreEntity.java",
+          "src/main/java/net/mcreator/sex/client/renderer/PLayreRenderer.java"
+        ]
+      },
+      "path": "~/player/Ria"
+    },
+    {
+      "name": "MovementStop",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "movement_stop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/potion/MovementStopMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "Robot",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/entity/model/RobotModel.java",
+          "src/main/resources/assets/sex/models/item/robot_spawn_egg.json",
+          "src/main/java/net/mcreator/sex/client/renderer/RobotRenderer.java",
+          "src/main/java/net/mcreator/sex/entity/RobotEntity.java"
+        ]
+      },
+      "path": "~/Robots"
+    },
+    {
+      "name": "Riaexpangain",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riaexpangain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/client/renderer/RiaexpangainRenderer.java",
+          "src/main/java/net/mcreator/sex/entity/model/RiaexpangainModel.java",
+          "src/main/java/net/mcreator/sex/entity/RiaexpangainEntity.java"
+        ]
+      },
+      "path": "~/Ria"
+    },
+    {
+      "name": "Riagain",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riagain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/entity/RiagainEntity.java",
+          "src/main/java/net/mcreator/sex/entity/model/RiagainModel.java",
+          "src/main/java/net/mcreator/sex/client/renderer/RiagainRenderer.java"
+        ]
+      },
+      "path": "~/Ria"
+    },
+    {
+      "name": "DebugKeyTestOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "debug_key_test_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/DebugKeyTestOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DebugStuff"
+    },
+    {
+      "name": "DebugKeyTest",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_key_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/network/DebugKeyTestMessage.java"
+        ]
+      },
+      "path": "~/DebugStuff"
+    },
+    {
+      "name": "Ria_Test",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ria_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sex/procedures/Ria_TestProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Ria"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "RiaX",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RiaY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RiaZ",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ShouldNude",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "IsNude",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Cum"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "entity.sex.riagain": "Ria",
+      "entity.sex.robot": "Robot",
+      "item.sex.riaexpangain_spawn_egg": "Ria Spawn Egg",
+      "key.sex.debug_key_test": "Debug_Key_Test",
+      "gui.sex.riainventory.button_dress": "Dress",
+      "entity.sex.ria": "Ria",
+      "item.sex.ria_spawn_egg": "Ria Spawn Egg",
+      "key.sex.fuckit": "Fuck it bucket",
+      "entity.sex.jenny": "Jenny",
+      "gui.sex.ria_exp_inventory.button_expansion": "Milk",
+      "gui.sex.ria_exp_inventory.button_strip": "Strip",
+      "item.sex.riastripped_spawn_egg": "Ria Spawn Egg",
+      "item_group.sex.sex_2": "SEX 2",
+      "item.sex.jenny_spawn_egg": "Jenny Spawn Egg",
+      "block.sex.cum": "Cum",
+      "item.sex.cum_bucket": "Bucket of Cum",
+      "item.sex.riastrippedexpan_spawn_egg": "Ria Spawn Egg",
+      "gui.sex.riainventory.button_expansion": "Expansion",
+      "item.sex.player_ria_spawn_egg": "Ria_Player Spawn Egg",
+      "item.sex.riaexpan_spawn_egg": "Ria Spawn Egg",
+      "gui.sex.ria_exp_inventory.button_dress": "Dress",
+      "gui.sex.riainventory.button_strip": "Strip",
+      "entity.sex.riaexpan": "Ria",
+      "item.sex.robot_spawn_egg": "Robot Spawn Egg",
+      "entity.sex.riaexpangain": "Ria",
+      "entity.sex.riastripped": "Ria",
+      "entity.sex.player_ria": "Ria_Player",
+      "entity.sex.riastrippedexpan": "Ria",
+      "fluid.sex.cum": "Cum",
+      "gui.sex.goblin_gui.tooltip_place_tool_for_goblin": "Place tool for goblin",
+      "effect.sex.movement_stop": "Movement Stop",
+      "item.sex.riagain_spawn_egg": "Ria Spawn Egg"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Ria",
+        "children": [
+          {
+            "name": "Code",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Jenny",
+        "children": [
+          {
+            "name": "Code",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "DebugStuff",
+        "children": []
+      },
+      {
+        "name": "player",
+        "children": [
+          {
+            "name": "Ria",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Robots",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "sex",
+    "modName": "SEX 2",
+    "version": "1.0.0 proto",
+    "author": "XPS, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "modPicture": "steak_je4_be3",
+    "requiredMods": [
+      "geckolib"
+    ],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.sex"
+  },
+  "mcreatorVersion": 202400452410
+}
